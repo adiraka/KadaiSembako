@@ -38,12 +38,7 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'admins',
-        ],
-
-        'pelanggan' => [
-            'driver' => 'session',
-            'provider' => 'pelanggans',
+            'provider' => 'users',
         ],
 
         'api' => [
@@ -70,13 +65,9 @@ return [
     */
 
     'providers' => [
-        'admins' => [
+        'users' => [
             'driver' => 'eloquent',
-            'model' => Sembako\Admin::class,
-        ],
-        'pelanggans' => [
-            'driver' => 'eloquent',
-            'model' => Sembako\Pelanggan::class,
+            'model' => Sembako\User::class,
         ],
 
         // 'users' => [

@@ -15,7 +15,7 @@ class CreateTransaksisTable extends Migration
     {
         Schema::create('transaksis', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('pelanggan_id');
+            $table->integer('user_id');
             $table->date('tgl');
             $table->enum('metode', ['Cash On Delivery', 'Transfer Rekening']);
             $table->integer('total_bayar');

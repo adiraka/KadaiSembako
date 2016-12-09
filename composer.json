@@ -10,7 +10,9 @@
         "yajra/laravel-datatables-oracle": "^6.22",
         "laravel/socialite": "^2.0",
         "google/recaptcha": "~1.1",
-        "predis/predis": "^1.1"
+        "predis/predis": "^1.1",
+        "intervention/image": "dev-master",
+        "gloudemans/shoppingcart": "^2.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

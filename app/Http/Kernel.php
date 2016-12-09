@@ -46,11 +46,15 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => \Illuminate\Auth\Middleware\Authenticate::class,
-        'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+        // 'auth' => \Illuminate\Auth\Middleware\Authenticate::class,
+        // 'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \Sembako\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'auth' => \Sembako\Http\Middleware\Authenticate::class,
+        'pelangganRedir' => \Sembako\Http\Middleware\PelangganRedir::class,
+        'admin' => \Sembako\Http\Middleware\Admin::class,
+        'adminRedir' => \Sembako\Http\Middleware\AdminRedir::class,
     ];
 }
