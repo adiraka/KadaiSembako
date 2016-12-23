@@ -4330,3 +4330,12 @@ img {
   }
 }
 
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+  background-color: #3fc35f;
+  color: #fff !important;
+}
+
+#aa-product-category .aa-product-catg-content .aa-product-catg-pagination .pagination li a:hover, #aa-product-category .aa-product-catg-content .aa-product-catg-pagination .pagination li span:hover {
+  background-color: #3fc35f;
+  color: #fff;
+}

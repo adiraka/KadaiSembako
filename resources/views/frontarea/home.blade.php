@@ -4,9 +4,9 @@
 
 @include('frontarea.partials.slider')
 
-@include('frontarea.partials.promo')
+{{-- @include('frontarea.partials.promo') --}}
 
-@include('frontarea.partials.ads')
+{{-- @include('frontarea.partials.ads') --}}
 
 @include('frontarea.partials.popular-product')
 

@@ -17,6 +17,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function transaksi()
+    {
+        return $this->hasMany('Sembako\Transaksi');
+    }
+
     public function roles()
     {
         return $this->belongsToMany('Sembako\Role')->withTimeStamps();

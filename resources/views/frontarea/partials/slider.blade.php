@@ -4,7 +4,7 @@
       <ul class="seq-canvas">
         <li>
           <div class="seq-model">
-            <img data-seq src="img/slider/1.jpg" alt="Men slide img" />
+            <img data-seq src="{{ asset('asset-front/img/slider/slide1.jpg') }}" alt="Men slide img" />
           </div>
           {{-- <div class="seq-title">
             <span data-seq>Save Up to 75% Off</span>                
@@ -15,7 +15,7 @@
         </li>
         <li>
           <div class="seq-model">
-            <img data-seq src="img/slider/2.jpg" alt="Wristwatch slide img" />
+            <img data-seq src="{{ asset('asset-front/img/slider/slide2.jpg') }}" alt="Wristwatch slide img" />
           </div>
           {{-- <div class="seq-title">
             <span data-seq>Save Up to 40% Off</span>                

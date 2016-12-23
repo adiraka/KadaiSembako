@@ -20,7 +20,7 @@ class Authenticate
             if ($request->ajax()) {
                 return response('Unauthorized', 401);
             } else {
-                return redirect()->to('/akun');
+                return redirect()->route('login');
             }
         }
         return $next($request);

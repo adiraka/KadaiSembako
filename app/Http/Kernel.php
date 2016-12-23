@@ -53,6 +53,7 @@ class Kernel extends HttpKernel
         'guest' => \Sembako\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'auth' => \Sembako\Http\Middleware\Authenticate::class,
+        'pelanggan' => \Sembako\Http\Middleware\Pelanggan::class,
         'pelangganRedir' => \Sembako\Http\Middleware\PelangganRedir::class,
         'admin' => \Sembako\Http\Middleware\Admin::class,
         'adminRedir' => \Sembako\Http\Middleware\AdminRedir::class,

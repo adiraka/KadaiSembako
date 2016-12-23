@@ -12,11 +12,12 @@
             <div class="aa-header-top-right">
               <ul class="aa-head-top-nav-right">
                 <li><a href="account.html">Akun Saya</a></li>
-                <li class="hidden-xs"><a href="checkout.html">Pembayaran</a></li>
+                <li class="hidden-xs"><a href="{{ route('pembayaran') }}">Pembayaran</a></li>
                 @if (Auth::check())
                   <li><a href="{{ route('logout') }}">Keluar</a></li>
                 @else
-                  <li><a href="{{ route('akun') }}">Masuk</a></li>
+                  <li><a href="{{ route('register') }}">Daftar</a></li>
+                  <li><a href="{{ route('login') }}">Masuk</a></li>
                 @endif
               </ul>
             </div>
@@ -33,13 +34,14 @@
             <div class="aa-logo">
               <a href="index.html">
                 <span class="fa fa-shopping-cart"></span>
-                <p>Kadai<strong>Sembako</strong> <span>Partner Belanja Anda</span></p>
+                <p>Kadai<strong>Sembako.id</strong> <span>Partner Belanja Anda</span></p>
               </a>
             </div>
             <div class="aa-cartbox">
-              <a class="aa-cart-link" href="#">
+              <a class="aa-cart-link" href="{{ route('keranjang') }}">
                 <span class="fa fa-shopping-basket"></span>
                 <span class="aa-cart-title">Keranjang Belanja</span>
+                {{-- <span class="aa-cart-notify">{{ count(Cart::content()) }}</span> --}}
               </a>
             </div>
             <div class="aa-search-box">
