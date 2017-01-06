@@ -5,6 +5,7 @@ namespace Sembako\Http\Controllers;
 use Illuminate\Http\Request;
 use Sembako\Role;
 use Sembako\User;
+use Sembako\Kategori;
 use Sembako\Barang;
 use Session;
 use Image;
@@ -28,8 +29,12 @@ class HomeController extends Controller
     public function getProduk()
     {
         $barangs = Barang::paginate(15);
+        $popular = Barang::inRandomOrder()->limit(5)->get();
+        $kategoris = Kategori::orderBy('nm_kategori', 'asc')->get();
         return view('frontarea.produk')->with([
+            'popular' => $popular,
             'barangs' => $barangs,
+            'kategoris' => $kategoris,
         ]);
     }
 
@@ -146,9 +151,6 @@ class HomeController extends Controller
 
             foreach ($detail as $item) {
                 $transaksi->detail()->save(new DetailTransaksi($item));
-                DB::table('barangs')->where('id', $item['barang_id'])->update([
-                    'qty' => $item['qty'],
-                ]);
             }
 
             foreach ($cart as $item) {

@@ -38,7 +38,7 @@
 											<p class="aa-product-descrip">{{ $barang->keterangan }}</p>
 										</figcaption>
 									</figure>
-									<span class="aa-badge aa-sale" href="#">SALE!</span>
+									<span class="aa-badge aa-sale" href="#">Stok: {{ $barang->qty.' '.$barang->satuan->nm_satuan }}</span>
 								</li>
 							@endforeach
 						</ul>

@@ -32,7 +32,7 @@
         <div class="col-md-12">
           <div class="aa-header-bottom-area">
             <div class="aa-logo">
-              <a href="index.html">
+              <a href="{{ route('home') }}">
                 <span class="fa fa-shopping-cart"></span>
                 <p>Kadai<strong>Sembako.id</strong> <span>Partner Belanja Anda</span></p>
               </a>

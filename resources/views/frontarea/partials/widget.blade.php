@@ -3,24 +3,24 @@
         <div class="aa-sidebar-widget">
             <h3>Kategori</h3>
             <ul class="aa-catg-nav">
-                <li><a href="#">Men</a></li>
-                <li><a href="">Women</a></li>
-                <li><a href="">Kids</a></li>
-                <li><a href="">Electornics</a></li>
-                <li><a href="">Sports</a></li>
+                @foreach ($kategoris as $kategori)
+                    <li><a href="">{{ $kategori->nm_kategori }}</a></li>
+                @endforeach
             </ul>
         </div>
         <div class="aa-sidebar-widget">
             <h3>Produk Terlaris</h3>
             <div class="aa-recently-views">
                 <ul>
-                    <li>
-                        <a href="#" class="aa-cartbox-img"><img alt="img" src="{{ asset('asset-front/img/woman-small-2.jpg') }}"></a>
-                        <div class="aa-cartbox-info">
-                            <h4><a href="#">Product Name</a></h4>
-                            <p>1 x $250</p>
-                        </div>                    
-                    </li>                                      
+                    @foreach ($popular as $barang)
+                        <li>
+                            <a href="#" class="aa-cartbox-img"><img alt="img" src="{{ asset('asset-front/img/woman-small-2.jpg') }}"></a>
+                            <div class="aa-cartbox-info">
+                                <h4><a href="#">{{ $barang->nm_barang }}</a></h4>
+                                <p>IDR {{ $barang->harga }}</p>
+                            </div>                    
+                        </li>
+                    @endforeach
                 </ul>
             </div>                            
         </div>

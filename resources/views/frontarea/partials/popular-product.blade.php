@@ -14,7 +14,7 @@
                            <li>
                               <figure>
                                  <a class="aa-product-img" href="#"><img src="{{ asset('asset-front/img/man/polo-shirt-2.png') }}" alt="polo shirt img"></a>
-                                 <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
+                                 <a class="aa-add-card-btn"href="{{ route('tambahKeranjang', ['id' => $barang->id]) }}"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                                  <figcaption>
                                     <h4 class="aa-product-title"><a href="#">{{ $barang->nm_barang }}</a></h4>
                                     <span class="aa-product-price">IDR {{ $barang->harga }}</span>
@@ -29,7 +29,7 @@
                            </li>
                            @endforeach   
                         </ul>
-                        <a class="aa-browse-btn" href="#">Lihat Semua Produk <span class="fa fa-long-arrow-right"></span></a>
+                        <a class="aa-browse-btn" href="{{ route('produk') }}">Lihat Semua Produk <span class="fa fa-long-arrow-right"></span></a>
                      </div>         
                   </div>
                </div>
